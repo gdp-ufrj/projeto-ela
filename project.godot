@@ -21,8 +21,33 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 [dialogic]
 
-directories/dch_directory={}
-directories/dtl_directory={}
+directories/dch_directory={
+"Pedro": "res://DialogicAssets/Characters/Pedro.dch",
+"Vaquinha_1": "res://DialogicAssets/Characters/Vaquinha_1.dch"
+}
+directories/dtl_directory={
+"test_timeline": "res://DialogicAssets/Timelines/test_timeline.dtl"
+}
+variables={}
+text/letter_speed=0.01
+text/initial_text_reveal_skippable=true
+text/text_reveal_skip_delay=0.1
+text/autoadvance_per_character_delay=0.1
+text/autoadvance_ignored_characters_enabled=true
+animations/join_default_length=0.5
+animations/leave_default_length=0.5
+animations/leave_default_wait=true
+animations/join_default_wait=true
+choices/autofocus_first=true
+choices/delay=0.2
+choices/reveal_delay=0
+choices/reveal_by_input=false
+save/autosave_delay=60.0
+save/encryption_on_exports_only=true
+extensions_folder="res://addons/dialogic_additions"
+text/autopauses={}
+layout/style_list=["res://DialogicAssets/Styles/dialogue_style.tres"]
+layout/default_style="res://DialogicAssets/Styles/dialogue_style.tres"
 
 [display]
 
@@ -75,3 +100,4 @@ dialogic_default_action={
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
+environment/defaults/default_clear_color=Color(0.00392157, 0.00392157, 0.00392157, 1)

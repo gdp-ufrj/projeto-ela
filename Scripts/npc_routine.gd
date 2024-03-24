@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+class_name NPC
+
 enum NPC_STATE { IDLE, WALK }
 
 @export var move_speed : float = 20
@@ -11,6 +13,11 @@ enum NPC_STATE { IDLE, WALK }
 @onready var npc_colision_shape = $CollisionShape2D
 @onready var npc_sprite = $Sprite2D
 @onready var timer = $Timer
+@onready var interactable_area = $InteractableArea2D
+
+@export_group("NPC properties")
+@export var timeline_key : StringName
+@export var dialogue_end_signal_key : StringName
 
 var move_direction : Vector2 = Vector2.ZERO
 var current_state : NPC_STATE = NPC_STATE.IDLE
@@ -18,6 +25,9 @@ var current_state : NPC_STATE = NPC_STATE.IDLE
 func _ready():
 	select_new_direction()
 	pick_new_state()
+	
+	interactable_area.timeline_key = timeline_key
+	interactable_area.dialogue_end_key = dialogue_end_signal_key
 
 func flip_colision_shape(x_direction):
 	if x_direction >= 0:
@@ -33,6 +43,9 @@ func select_new_direction():
 	var x_coords = randi_range(-1,1)
 	var y_coords = randi_range(-1,1)
 	
+	if(x_coords == 0 and y_coords == 0):
+		select_new_direction()
+		
 	flip_colision_shape(x_coords)
 	
 	move_direction = Vector2(x_coords, y_coords)
@@ -57,6 +70,9 @@ func pick_new_state():
 		current_state = NPC_STATE.IDLE
 		timer.start(randi_range(2,20))
 
+func set_state_to_idle():
+	timer.stop()
+	current_state = NPC_STATE.IDLE
 
 func _on_timer_timeout():
 	pick_new_state()

@@ -14,7 +14,8 @@ func interact(user : Node2D):
 	
 	
 func stop_interaction(user: Node2D):
-	is_open = false
-	animation_player.play(close_animation)
-	print_debug("Chest Closed")	
+	if(is_open):
+		is_open = false
+		animation_player.play(close_animation)
+		print_debug("Chest Closed")	
 	

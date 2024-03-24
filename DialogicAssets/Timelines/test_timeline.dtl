@@ -1,0 +1,9 @@
+join Vaquinha_1 (Vaquinha_1_Nervosa) 0 [animation="Fade In Up" wait="true"]
+Vaquinha_1: Muuuuuuu, eu sou a vaquinha líder!
+Vaquinha_1: E quem é você!
+join Pedro (Pedro Feliz) 4 [animation="Slide In Up"]
+- Eu sou o Pedro!
+	Vaquinha_1 (Vaquinha_1_Feliz): Ah, entendi, perdão pelo susto Pedro..
+- Não é da sua conta! >:(
+	Vaquinha_1 (Vaquinha_1_Nervosa): Garoto Babaca! 
+[signal arg="vaquinha_1_dialogue_ended"]

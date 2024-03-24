@@ -1,25 +1,14 @@
-[gd_scene load_steps=16 format=3 uid="uid://m2du2e4c41e8"]
+[gd_scene load_steps=18 format=3 uid="uid://m2du2e4c41e8"]
 
 [ext_resource type="Script" path="res://Scripts/npc_routine.gd" id="1_rnjob"]
 [ext_resource type="Texture2D" uid="uid://cwfy7gnxthpem" path="res://Assets/Sprout Lands/Characters/Free Cow Sprites.png" id="2_w5sst"]
+[ext_resource type="Script" path="res://Characters/Scripts/npc_interaction_talk_script.gd" id="3_lqp7h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lsx8h"]
 size = Vector2(16, 6)
 
 [sub_resource type="Animation" id="Animation_txi0t"]
 length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(),
-"transitions": PackedFloat32Array(),
-"update": 1,
-"values": []
-}
 
 [sub_resource type="Animation" id="Animation_mi4we"]
 resource_name = "idle_left"
@@ -118,13 +107,18 @@ states/Walk/node = SubResource("AnimationNodeAnimation_gomlb")
 states/Walk/position = Vector2(440, 100)
 transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_f8tvr"), "Idle", "Walk", SubResource("AnimationNodeStateMachineTransition_4xbp0"), "Walk", "Idle", SubResource("AnimationNodeStateMachineTransition_7qqdu")]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_k1qrk"]
+radius = 13.0
+
 [node name="test_npc" type="CharacterBody2D"]
 script = ExtResource("1_rnjob")
+timeline_key = &"test_timeline"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_w5sst")
 hframes = 3
 vframes = 2
+frame = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-2, 10)
@@ -144,6 +138,13 @@ anim_player = NodePath("../AnimationPlayer")
 
 [node name="Timer" type="Timer" parent="."]
 
-[node name="InteractableArea2D" type="Area2D" parent="."]
+[node name="InteractableArea2D" type="Area2D" parent="." node_paths=PackedStringArray("animation_player", "npc")]
+script = ExtResource("3_lqp7h")
+animation_player = NodePath("../AnimationPlayer")
+npc = NodePath("..")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableArea2D"]
+position = Vector2(-2, 10)
+shape = SubResource("CircleShape2D_k1qrk")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
