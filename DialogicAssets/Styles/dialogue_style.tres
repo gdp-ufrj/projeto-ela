@@ -1,46 +1,58 @@
-[gd_resource type="Resource" script_class="DialogicStyle" load_steps=13 format=3 uid="uid://b64x87rh6l67e"]
+[gd_resource type="Resource" script_class="DialogicStyle" load_steps=14 format=3 uid="uid://b64x87rh6l67e"]
 
 [ext_resource type="PackedScene" uid="uid://c1k5m0w3r40xf" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_FullBackground/full_background_layer.tscn" id="1_hmxnx"]
-[ext_resource type="Script" path="res://addons/dialogic/Resources/dialogic_style_layer.gd" id="2_potg7"]
+[ext_resource type="Script" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_FullBackground/full_background_layer.gd" id="2_ixtma"]
 [ext_resource type="PackedScene" uid="uid://cy1y14inwkplb" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Portraits/vn_portrait_layer.tscn" id="3_6mwas"]
 [ext_resource type="PackedScene" uid="uid://bquja8jyk8kbr" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/vn_textbox_layer.tscn" id="4_8aka8"]
+[ext_resource type="Script" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Portraits/vn_portrait_layer.gd" id="4_37ooo"]
 [ext_resource type="PackedScene" uid="uid://dsbwnp5hegnu3" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Glossary/glossary_popup_layer.tscn" id="6_di5n2"]
+[ext_resource type="Script" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/vn_textbox_layer.gd" id="6_ua4rj"]
 [ext_resource type="PackedScene" uid="uid://dhk6j6eb6e3q" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Choices/vn_choice_layer.tscn" id="7_7o61q"]
+[ext_resource type="Script" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Glossary/glossary_popup_layer.gd" id="8_u236r"]
+[ext_resource type="Script" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Choices/vn_choice_layer.gd" id="10_5hcv3"]
 [ext_resource type="Script" path="res://addons/dialogic/Resources/dialogic_style.gd" id="10_sqsby"]
 
-[sub_resource type="Resource" id="Resource_4vph1"]
-script = ExtResource("2_potg7")
-scene = ExtResource("1_hmxnx")
-overrides = {}
+[sub_resource type="GDScript" id="GDScript_1afgg"]
+script/source = "@tool
+extends DialogicLayoutBase
 
-[sub_resource type="Resource" id="Resource_v8bgn"]
-script = ExtResource("2_potg7")
-scene = ExtResource("3_6mwas")
-overrides = {}
+## The default layout base scene.
 
-[sub_resource type="Resource" id="Resource_fba18"]
-script = ExtResource("2_potg7")
-scene = ExtResource("4_8aka8")
-overrides = {
-"box_margin_bottom": "20.0",
-"box_size": "Vector2(10, 30)"
+@export var canvas_layer: int = 1
+
+@export_subgroup(\"Global\")
+@export var global_bg_color: Color = Color(0, 0, 0, 0.9)
+@export var global_font_color: Color = Color(\"white\")
+@export_file('*.ttf', '*.tres') var global_font: String = \"\"
+@export var global_font_size: int = 18
+
+
+func _apply_export_overrides() -> void:
+	# apply layer
+	set(&'layer', canvas_layer)
+
+
+"
+
+[sub_resource type="PackedScene" id="PackedScene_nur5l"]
+_bundled = {
+"conn_count": 0,
+"conns": PackedInt32Array(),
+"editable_instances": [],
+"names": PackedStringArray("Custom", "script", "CanvasLayer", "BackgroundLayer", "layout_mode", "anchors_preset", "anchor_right", "anchor_bottom", "grow_horizontal", "grow_vertical", "apply_overrides_on_ready", "Control", "VN_PortraitLayer", "mouse_filter", "VN_TextboxLayer", "box_panel", "box_size", "box_margin_bottom", "name_label_box_panel", "name_label_box_modulate", "Glossary", "VN_ChoiceLayer"),
+"node_count": 6,
+"node_paths": [],
+"nodes": PackedInt32Array(-1, -1, 2, 0, -1, 1, 1, 0, 0, 0, 0, 11, 3, 1, 8, 4, 2, 5, 3, 6, 4, 7, 4, 8, 5, 9, 5, 1, 6, 10, 7, 0, 0, 0, 11, 12, 8, 9, 4, 2, 5, 3, 6, 4, 7, 4, 8, 5, 9, 5, 13, 5, 1, 9, 10, 7, 0, 0, 0, 11, 14, 10, 14, 4, 2, 5, 3, 6, 4, 7, 4, 8, 5, 9, 5, 13, 5, 1, 11, 15, 12, 16, 13, 17, 14, 18, 15, 19, 16, 10, 7, 0, 0, 0, 11, 20, 17, 5, 4, 2, 5, 18, 13, 5, 1, 19, 10, 7, 0, 0, 0, 11, 21, 20, 9, 4, 2, 5, 3, 6, 4, 7, 4, 8, 5, 9, 5, 13, 5, 1, 21, 10, 7, 0),
+"variants": [SubResource("GDScript_1afgg"), ExtResource("1_hmxnx"), 3, 15, 1.0, 2, ExtResource("2_ixtma"), true, ExtResource("3_6mwas"), ExtResource("4_37ooo"), ExtResource("4_8aka8"), ExtResource("6_ua4rj"), "res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/vn_textbox_default_panel.tres", Vector2(10, 30), 20, "res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/vn_textbox_name_label_panel.tres", Color(0, 0, 0, 1), ExtResource("6_di5n2"), 0, ExtResource("8_u236r"), ExtResource("7_7o61q"), ExtResource("10_5hcv3")],
+"version": 3
 }
-
-[sub_resource type="Resource" id="Resource_861r5"]
-script = ExtResource("2_potg7")
-scene = ExtResource("6_di5n2")
-overrides = {}
-
-[sub_resource type="Resource" id="Resource_l1gqv"]
-script = ExtResource("2_potg7")
-scene = ExtResource("7_7o61q")
-overrides = {}
 
 [resource]
 script = ExtResource("10_sqsby")
 name = "dialogue_style"
+base_scene = SubResource("PackedScene_nur5l")
 base_overrides = {
 "global_font_size": "5.0"
 }
-layers = Array[ExtResource("2_potg7")]([SubResource("Resource_4vph1"), SubResource("Resource_v8bgn"), SubResource("Resource_fba18"), SubResource("Resource_861r5"), SubResource("Resource_l1gqv")])
-metadata/_latest_layer = 1
+layers = Array[Resource("res://addons/dialogic/Resources/dialogic_style_layer.gd")]([])
+metadata/_latest_layer = -1

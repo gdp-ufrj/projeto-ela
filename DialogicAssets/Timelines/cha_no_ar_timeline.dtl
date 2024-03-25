@@ -1,0 +1,11 @@
+join Leia 1
+Leia (Blush): Eita, que lugar esquisito é este, não me lembro do café ter tantas vaquinhas antes...
+Leia (Blush): MEU DEUS, eu sou uma vaquinha ;-;
+join Iris 3
+Iris (Blush): Leia?! Você também está aqui! E um pouco diferente(?)
+Iris (Blush): Pera... Onde exatamente é aqui???
+Leia (Blush): Não faço ideia! Vamos correr!!
+leave Leia
+Iris (Blush): ESPERA POR MIM SUA VACA!!!
+leave Iris
+[signal arg="dialogue_ended"]

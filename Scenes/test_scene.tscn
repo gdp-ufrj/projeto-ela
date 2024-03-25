@@ -446,7 +446,6 @@ remote_path = NodePath("../../Camera2D")
 [node name="TileMap" type="TileMap" parent="."]
 z_index = 1
 z_as_relative = false
-y_sort_enabled = true
 position = Vector2(241, 209)
 tile_set = SubResource("TileSet_8jpqn")
 format = 2
@@ -463,15 +462,8 @@ position = Vector2(202, 190)
 
 [node name="npc_1" parent="." instance=ExtResource("6_si45k")]
 position = Vector2(164, 185)
-dialogue_end_signal_key = &"vaquinha_1_dialogue_ended"
-
-[node name="npc_2" parent="." instance=ExtResource("6_si45k")]
-position = Vector2(142, 262)
-dialogue_end_signal_key = &"vaquinha_1_dialogue_ended"
-
-[node name="npc_3" parent="." instance=ExtResource("6_si45k")]
-position = Vector2(230, 227)
-dialogue_end_signal_key = &"vaquinha_1_dialogue_ended"
+timeline_key = &"cha_no_ar_timeline"
+dialogue_end_signal_key = &"dialogue_ended"
 
 [node name="Chest" parent="." instance=ExtResource("7_b312p")]
 position = Vector2(173, 37)
