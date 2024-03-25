@@ -6,6 +6,7 @@ extends Interactable
 var timeline_key : StringName
 var dialogue_end_key : StringName
 @export var npc : NPC
+@export var player : CharacterBody2D
 
 var talking : bool = false
 
@@ -13,11 +14,8 @@ func _ready():
 	Dialogic.signal_event.connect(_on_dialoc_signal)
 
 func interact(user : Node2D):
-	print_debug("Dialogue started")
 	if Dialogic.current_timeline != null:
 		pass
-	
-	print_debug(timeline_key)
 	
 	npc.set_state_to_idle()
 	Dialogic.start(timeline_key as String)
