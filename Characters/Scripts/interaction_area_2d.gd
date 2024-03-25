@@ -24,9 +24,10 @@ func _on_area_entered(area):
 
 func _on_area_exited(area):
 	nearby_interactables.erase(area)
-		
 	selected_interactable.stop_interaction(interactor)
 		
 	if(nearby_interactables.size() > 0):
 		selected_interactable = nearby_interactables[0]
+	else:
+		selected_interactable = null
 		
