@@ -14,6 +14,9 @@ func _ready():
 	Dialogic.signal_event.connect(_on_dialoc_signal)
 
 func interact(user : Node2D):
+	if (talking):
+		pass
+	print_debug("i call interact")
 	if Dialogic.current_timeline != null:
 		pass
 	
