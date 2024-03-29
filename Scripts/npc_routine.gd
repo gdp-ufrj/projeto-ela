@@ -40,8 +40,8 @@ func flip_colision_shape(x_direction):
 			npc_sprite.flip_h = true
 
 func select_new_direction():
-	var x_coords = randi_range(-1,1)
-	var y_coords = randi_range(-1,1)
+	var x_coords = randf_range(-1,1)
+	var y_coords = randf_range(-1,1)
 	
 	if(x_coords == 0 and y_coords == 0):
 		select_new_direction()

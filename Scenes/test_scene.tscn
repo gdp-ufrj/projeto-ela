@@ -467,3 +467,6 @@ dialogue_end_signal_key = &"dialogue_ended"
 
 [node name="Chest" parent="." instance=ExtResource("7_b312p")]
 position = Vector2(173, 37)
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(224, 306)
