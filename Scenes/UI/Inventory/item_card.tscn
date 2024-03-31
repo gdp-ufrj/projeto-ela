@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://pjtwbckdrgmy"]
+
+[ext_resource type="Script" path="res://Scripts/item_card.gd" id="1_s0byf"]
+[ext_resource type="Texture2D" uid="uid://78s0q2qes1o4" path="res://Assets/Sprout Lands/Objects/00_Basic tools and meterials.png" id="2_lpl3r"]
+[ext_resource type="FontFile" uid="uid://b16phi61gv8o2" path="res://DialogicAssets/Styles/Fonts/Minecraft.ttf" id="3_ojyvl"]
+
+[node name="ColorRect" type="ColorRect"]
+custom_minimum_size = Vector2(160, 200)
+offset_right = 160.0
+offset_bottom = 200.0
+color = Color(0.847059, 0.380392, 0.952941, 0.188235)
+script = ExtResource("1_s0byf")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(80, 80)
+scale = Vector2(7, 7)
+texture = ExtResource("2_lpl3r")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 168.0
+offset_right = 152.0
+offset_bottom = 184.0
+theme_override_fonts/normal_font = ExtResource("3_ojyvl")
+bbcode_enabled = true
+text = "[center]???[/center]"

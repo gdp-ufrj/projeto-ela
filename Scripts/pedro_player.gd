@@ -6,12 +6,21 @@ extends CharacterBody2D
 
 @onready var animation_tree = $AnimationTree
 @onready var state_machine = animation_tree.get("parameters/playback")
+@onready var inventory_canvas_reference = $InventoryUI
+@onready var inventory_control_reference = $InventoryUI/InventoryDisplay
 
 var should_walk : bool = true
 
 func _ready():
 	update_animation_parameters(starting_direction)
 	Dialogic.signal_event.connect(_on_dialoc_signal)
+	
+	Global.set_player_reference(self)
+	Global.set_player_inventory_reference(inventory_control_reference)
+	
+func _process(_delta):
+	if Input.is_action_just_pressed("ui_inventory"):
+		inventory_canvas_reference.visible = !inventory_canvas_reference.visible
 
 func _physics_process(_delta):
 	# getting the input direction
@@ -34,7 +43,6 @@ func _physics_process(_delta):
 	pick_new_animation_state()
 
 func update_animation_parameters(move_input: Vector2):
-	
 	if(move_input != Vector2.ZERO):
 		animation_tree.set("parameters/Walk/blend_position", move_input) 
 		animation_tree.set("parameters/Idle/blend_position", move_input)

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemResource" load_steps=3 format=3 uid="uid://f110uagtwyyo"]
+
+[ext_resource type="Script" path="res://Items/items_custom_resource.gd" id="1_0adql"]
+[ext_resource type="Texture2D" uid="uid://bcssyvbqbarsn" path="res://Assets/Sprout Lands/Objects/03_Basic tools and meterials.png" id="1_k15n5"]
+
+[resource]
+script = ExtResource("1_0adql")
+Item_Unique_Key = "rock"
+Item_Name = &"Pedra"
+Item_Description = "Uma pedra"
+Item_Sprite = ExtResource("1_k15n5")

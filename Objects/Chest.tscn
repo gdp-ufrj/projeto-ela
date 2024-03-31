@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://cwllxhgtmey8d"]
+[gd_scene load_steps=10 format=3 uid="uid://cwllxhgtmey8d"]
 
 [ext_resource type="Texture2D" uid="uid://dq3yrrrholw4f" path="res://Assets/Sprout Lands/Objects/Chest.png" id="1_8c5eh"]
 [ext_resource type="Script" path="res://Objects/Scripts/chest_script.gd" id="2_7x54m"]
+[ext_resource type="Script" path="res://Objects/Scripts/chest_item_manager.gd" id="2_i4f2d"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4f8t4"]
 size = Vector2(16, 6)
@@ -67,6 +68,7 @@ _data = {
 texture = ExtResource("1_8c5eh")
 hframes = 5
 vframes = 2
+script = ExtResource("2_i4f2d")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 

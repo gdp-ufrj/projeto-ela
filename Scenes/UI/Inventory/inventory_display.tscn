@@ -1,0 +1,70 @@
+[gd_scene load_steps=2 format=3 uid="uid://bh17ixh3tlas"]
+
+[sub_resource type="GDScript" id="GDScript_tnom0"]
+script/source = "extends Control
+
+@onready var grid_container = $ColorRect/MarginContainer/GridContainer
+
+var is_open: bool = false
+
+var item_cards_dictionary : Dictionary = {}
+
+func set_new_object_list(stage_object_list):
+	var object_list = stage_object_list.ObjectArray
+	var item_card_instantiable = load(\"res://Scenes/UI/Inventory/item_card.tscn\")
+	for object in object_list:
+		var object_card = item_card_instantiable.instantiate()
+		
+		object_card.item_resource = object
+		grid_container.add_child(object_card)
+		
+		item_cards_dictionary[object.Item_Unique_Key] = {
+			\"reference\": object_card,
+			\"found\": false
+		}
+		
+func item_found(item_unique_key):
+	var card = item_cards_dictionary[item_unique_key][\"reference\"]
+	
+	item_cards_dictionary[item_unique_key][\"found\"] = true
+	
+	card.update_object_attributes_when_found()
+"
+
+[node name="InventoryDisplay" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = SubResource("GDScript_tnom0")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 124.0
+offset_top = -148.0
+offset_right = -124.0
+offset_bottom = -50.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0.894118, 0.521569, 0.807843, 0.129412)
+
+[node name="MarginContainer" type="MarginContainer" parent="ColorRect"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = -140.0
+offset_right = 1648.0
+offset_bottom = 60.0
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_right = 10
+
+[node name="GridContainer" type="GridContainer" parent="ColorRect/MarginContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 20
+columns = 13
+metadata/_edit_use_anchors_ = true

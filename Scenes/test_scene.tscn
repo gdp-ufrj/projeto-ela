@@ -1,12 +1,16 @@
-[gd_scene load_steps=13 format=3 uid="uid://ckqrqfbd7etrm"]
+[gd_scene load_steps=17 format=3 uid="uid://ckqrqfbd7etrm"]
 
+[ext_resource type="Script" path="res://Scripts/scene_setup.gd" id="1_c5j1n"]
 [ext_resource type="PackedScene" uid="uid://4rv1dclyyr7i" path="res://Characters/pedro_player.tscn" id="1_g7nrp"]
+[ext_resource type="Resource" uid="uid://87ah6pvfo38i" path="res://Items/ObjectSpawnLists/test_stage_object_list.tres" id="2_6w3kb"]
 [ext_resource type="Texture2D" uid="uid://funhdjujd8v1" path="res://Assets/Sprout Lands/Tilesets/Grass.png" id="2_qyicq"]
 [ext_resource type="Texture2D" uid="uid://00l71x5vubjv" path="res://Assets/Sprout Lands/Tilesets/Hills.png" id="3_q51pi"]
 [ext_resource type="Texture2D" uid="uid://b4aiqro0qa3yc" path="res://Assets/Sprout Lands/Tilesets/Water.png" id="4_2i02a"]
 [ext_resource type="Texture2D" uid="uid://bfo6r2angwm3h" path="res://Assets/Sprout Lands/Tilesets/Fences.png" id="5_jox1i"]
 [ext_resource type="PackedScene" uid="uid://m2du2e4c41e8" path="res://Characters/test_npc.tscn" id="6_si45k"]
 [ext_resource type="PackedScene" uid="uid://cwllxhgtmey8d" path="res://Objects/Chest.tscn" id="7_b312p"]
+[ext_resource type="Resource" uid="uid://ballcn210bqpo" path="res://Items/ItemsResources/watering_can.tres" id="8_xb0ys"]
+[ext_resource type="Resource" uid="uid://f110uagtwyyo" path="res://Items/ItemsResources/rock.tres" id="9_x34in"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j8ist"]
 texture = ExtResource("2_qyicq")
@@ -436,6 +440,8 @@ sources/3 = SubResource("TileSetAtlasSource_akm0i")
 [node name="Node2D" type="Node2D"]
 z_as_relative = false
 y_sort_enabled = true
+script = ExtResource("1_c5j1n")
+level_items = ExtResource("2_6w3kb")
 
 [node name="pedro_player" parent="." instance=ExtResource("1_g7nrp")]
 position = Vector2(202, 190)
@@ -459,6 +465,7 @@ metadata/_edit_lock_ = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(202, 190)
+zoom = Vector2(2, 2)
 
 [node name="npc_1" parent="." instance=ExtResource("6_si45k")]
 position = Vector2(164, 185)
@@ -466,7 +473,12 @@ timeline_key = &"cha_no_ar_timeline"
 dialogue_end_signal_key = &"dialogue_ended"
 
 [node name="Chest" parent="." instance=ExtResource("7_b312p")]
+position = Vector2(241, 37)
+item_resource = ExtResource("8_xb0ys")
+
+[node name="Chest2" parent="." instance=ExtResource("7_b312p")]
 position = Vector2(173, 37)
+item_resource = ExtResource("9_x34in")
 
 [node name="Marker2D" type="Marker2D" parent="."]
 position = Vector2(224, 306)

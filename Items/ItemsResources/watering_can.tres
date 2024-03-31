@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemResource" load_steps=3 format=3 uid="uid://ballcn210bqpo"]
+
+[ext_resource type="Texture2D" uid="uid://78s0q2qes1o4" path="res://Assets/Sprout Lands/Objects/00_Basic tools and meterials.png" id="1_fqk86"]
+[ext_resource type="Script" path="res://Items/items_custom_resource.gd" id="1_j41u2"]
+
+[resource]
+script = ExtResource("1_j41u2")
+Item_Unique_Key = "watering_can"
+Item_Name = &"Regador"
+Item_Description = "Usado pra regar plantas, duh.."
+Item_Sprite = ExtResource("1_fqk86")
