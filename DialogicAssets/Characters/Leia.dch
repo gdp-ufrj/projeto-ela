@@ -13,7 +13,7 @@
 "display_name": "Leia",
 "mirror": false,
 "nicknames": [""],
-"offset": Vector2(0, -90),
+"offset": Vector2(0, -360),
 "portraits": {
 "Blush": {
 "export_overrides": {
@@ -25,5 +25,5 @@
 "scene": ""
 }
 },
-"scale": 0.05
+"scale": 0.2
 }

@@ -21,20 +21,22 @@ overrides = {
 "box_animation_out": "1",
 "box_color_custom": "Color(0.917647, 0.756863, 0.980392, 1)",
 "box_color_use_global": "false",
+"box_margin_bottom": "60.0",
 "box_panel": "\"vn_textbox_default_panel.tres\"",
-"box_size": "Vector2(350, 75)",
+"box_size": "Vector2(1400, 300)",
 "name_label_box_modulate": "Color(0.917647, 0.756863, 0.980392, 1)",
+"name_label_box_offset": "Vector2(0, -1)",
 "name_label_box_panel": "\"vn_textbox_name_label_panel.tres\"",
 "name_label_box_use_global_color": "false",
 "name_label_custom_color": "Color(0.266667, 0.00784314, 0.25098, 1)",
-"name_label_custom_font_size": "10.0",
+"name_label_custom_font_size": "25.0",
 "name_label_font": "\"res://DialogicAssets/Styles/Fonts/Minecraft.ttf\"",
 "name_label_use_global_font": "false",
 "name_label_use_global_font_size": "false",
 "next_indicator_show_on_questions": "false",
-"next_indicator_size": "Vector2(5, 5)",
+"next_indicator_size": "Vector2(20, 20)",
 "text_custom_color": "Color(0.266667, 0.00784314, 0.25098, 1)",
-"text_size": "5.0",
+"text_size": "20.0",
 "text_use_global_color": "false",
 "text_use_global_size": "false"
 }
@@ -52,4 +54,4 @@ base_overrides = {
 "global_font_size": "2.0"
 }
 layers = Array[ExtResource("2_1a8t7")]([SubResource("Resource_5mios"), SubResource("Resource_fcbf1"), SubResource("Resource_jitx4")])
-metadata/_latest_layer = 0
+metadata/_latest_layer = 1
