@@ -65,6 +65,7 @@ _data = {
 }
 
 [node name="Chest" type="Sprite2D"]
+z_index = 1
 texture = ExtResource("1_8c5eh")
 hframes = 5
 vframes = 2

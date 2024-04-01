@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="ObjectSpawnListResource" load_steps=2 format=3 uid="uid://cuf2eftyyryfd"]
+
+[ext_resource type="Script" path="res://Items/object_spawn_list_resource.gd" id="1_3u21m"]
+
+[resource]
+script = ExtResource("1_3u21m")
+ObjectArray = Array[Resource("res://Items/items_custom_resource.gd")]([])
