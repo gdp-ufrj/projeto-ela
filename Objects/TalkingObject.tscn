@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://bgdomcha4ljk3"]
+
+[ext_resource type="Texture2D" uid="uid://bodbspvs5vwh2" path="res://Assets/Sprout Lands/Objects/Basic Plants.png" id="1_mbk58"]
+[ext_resource type="Script" path="res://Objects/Scripts/talking_object.gd" id="2_4exdh"]
+[ext_resource type="Script" path="res://Objects/Scripts/talking_object_manager.gd" id="2_ry0xy"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fpqf1"]
+radius = 17.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ei4np"]
+size = Vector2(11, 3)
+
+[node name="TalkingObject" type="Sprite2D"]
+position = Vector2(0, -5)
+texture = ExtResource("1_mbk58")
+hframes = 6
+vframes = 2
+frame = 4
+script = ExtResource("2_ry0xy")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(0, 5)
+script = ExtResource("2_4exdh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_fpqf1")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(0, 5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_ei4np")

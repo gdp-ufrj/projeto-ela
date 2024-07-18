@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://ckqrqfbd7etrm"]
+[gd_scene load_steps=19 format=3 uid="uid://ckqrqfbd7etrm"]
 
 [ext_resource type="Script" path="res://Scripts/scene_setup.gd" id="1_c5j1n"]
 [ext_resource type="PackedScene" uid="uid://4rv1dclyyr7i" path="res://Characters/pedro_player.tscn" id="1_g7nrp"]
@@ -11,6 +11,9 @@
 [ext_resource type="Resource" uid="uid://ballcn210bqpo" path="res://Items/ItemsResources/watering_can.tres" id="8_xb0ys"]
 [ext_resource type="Resource" uid="uid://f110uagtwyyo" path="res://Items/ItemsResources/rock.tres" id="9_x34in"]
 [ext_resource type="PackedScene" uid="uid://c55a3hqjrhmpp" path="res://Objects/Door.tscn" id="11_cawtv"]
+[ext_resource type="PackedScene" uid="uid://dr6x3blt8s5lb" path="res://Objects/FloorObject.tscn" id="12_whpfu"]
+[ext_resource type="Texture2D" uid="uid://nu7j5smcjp5q" path="res://Assets/Sprout Lands/Objects/Egg item.png" id="13_13ckq"]
+[ext_resource type="PackedScene" uid="uid://bgdomcha4ljk3" path="res://Objects/TalkingObject.tscn" id="14_ey34c"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1g82b"]
 texture = ExtResource("4_kbx13")
@@ -428,6 +431,7 @@ sources/2 = SubResource("TileSetAtlasSource_whk0u")
 [node name="TestScene" type="Node2D"]
 z_as_relative = false
 y_sort_enabled = true
+position = Vector2(21, 21)
 script = ExtResource("1_c5j1n")
 level_items = ExtResource("2_6w3kb")
 
@@ -460,7 +464,7 @@ zoom = Vector2(2, 2)
 z_index = 1
 y_sort_enabled = true
 position = Vector2(164, 185)
-timeline_key = &"cha_no_ar_timeline"
+timeline_key = &"first_month_0"
 dialogue_end_signal_key = &"dialogue_ended"
 
 [node name="Chest" parent="." instance=ExtResource("7_b312p")]
@@ -473,10 +477,19 @@ y_sort_enabled = true
 position = Vector2(173, 37)
 item_resource = ExtResource("9_x34in")
 
-[node name="Marker2D" type="Marker2D" parent="."]
-position = Vector2(224, 306)
-
 [node name="Door" parent="." instance=ExtResource("11_cawtv")]
 z_index = 1
 position = Vector2(29, 94)
 next_scene_path = "res://Scenes/test_scene_2.tscn"
+
+[node name="StandardObject" parent="." instance=ExtResource("12_whpfu")]
+z_index = 1
+y_sort_enabled = true
+position = Vector2(267, 197)
+texture = ExtResource("13_13ckq")
+item_resource = ExtResource("9_x34in")
+
+[node name="TalkingObject" parent="." instance=ExtResource("14_ey34c")]
+z_index = 1
+position = Vector2(324, 193)
+timeline_key = "first_month_laranjeira"

@@ -58,7 +58,6 @@ libraries = {
 }
 
 [node name="ColorRect" type="ColorRect" parent="."]
-visible = false
 offset_left = -5.0
 offset_top = -8.0
 offset_right = 5.0

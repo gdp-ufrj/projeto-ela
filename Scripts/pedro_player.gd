@@ -9,6 +9,8 @@ extends CharacterBody2D
 @onready var inventory_canvas_reference = $InventoryUI
 @onready var inventory_control_reference = $InventoryUI/InventoryDisplay
 
+var is_interacting : bool = false
+
 var should_walk : bool = true
 
 func _ready():
@@ -44,7 +46,7 @@ func _physics_process(_delta):
 
 func update_animation_parameters(move_input: Vector2):
 	if(move_input != Vector2.ZERO):
-		animation_tree.set("parameters/Walk/blend_position", move_input) 
+		animation_tree.set("parameters/Walk/blend_position", move_input)
 		animation_tree.set("parameters/Idle/blend_position", move_input)
 		
 func pick_new_animation_state():

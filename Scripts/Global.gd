@@ -29,3 +29,7 @@ func find_item(item_unique_key: String):
 	
 	player_inventory_ui_reference.item_found(item_unique_key)
 		
+func is_player_interacting():
+	if (player_node.is_interacting):
+		return true
+	return false

@@ -10,9 +10,9 @@
 },
 "default_portrait": "Happy",
 "description": "",
-"display_name": "Pedro",
+"display_name": "Vó Tereza",
 "mirror": false,
-"nicknames": ["Pedrinho"],
+"nicknames": [""],
 "offset": Vector2(0, 0),
 "portraits": {
 "Happy": {
@@ -34,5 +34,5 @@
 "scene": ""
 }
 },
-"scale": 0.15
+"scale": 1.0
 }

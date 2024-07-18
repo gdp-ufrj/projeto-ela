@@ -1,0 +1,143 @@
+label 0
+[signal arg="dialogue_started"]
+join Pedro (Happy) 4 [ mirrored="true"]
+Pedro: (Tô tão animado para ver o vovô e a vovó! Que bom o papai e a mamãe me deixaram ir sozinho dessa vez...)
+Pedro: (Eles tem ficado muito ocupados com o trabalho e a gente não visita mais como antes, mas dessa vez eu insisti muito muito muito.)
+Pedro: (Tenho tanta coisa para contar. Vou anotar tudo para não esquecer! Queria chegar logo, acho que não vou conseguir nem dormir...)
+Pedro: ...
+join Mae (Happy) 1
+Mae: Pedro, acorda filho.
+Pedro: Hm? Já chegamos?
+join Pai (Happy) 2
+Pai: Sim! Olha seus avós lá no portão!
+Pedro: Oi vô! Oi vó!
+Avó: Pedrinho! Que saudades... Tempo demais...
+Avó: Como você tá? Como tá a escola?
+Avó: Ai! Esqueci a água no forno! Fala com o seu avô e depois me encontra lá na cozinha e me conta tudo, tá bom?
+Pedro: Pode deixar, vó!
+Avõ: Opa, meu menino! Quase não te reconheci, você cresceu o quê? Uns dois metros?
+Pedro: Cinco centímetros!
+Avõ: Não acredito nisso!
+Pedro: Para de graça, vô!
+Avõ: Vem cá, eu tenho uma surpresa para você depois. Consegui terminar de montar a oficina lá no jardim e acho que você vai gostar de como ficou.
+Avõ: Mas primeiro, dá uma olhada pela casa. E não esquece de falar com a sua avó na cozinha!
+[signal arg="progress_to_next_label,first_month"]
+[signal arg="dialogue_ended"]
+[end_timeline]
+label 1
+[signal arg="dialogue_started"]
+join Pedro (Happy) 4
+Pedro: To aqui vó! O que você tá fazendo?
+join Avó (Happy) 0
+Avó: Um bolinho para a gente comer agora de tarde! Comemorar a sua chegada... Queria que ele tivesse ficado pronto antes de você chegar!
+Pedro: Não tem problema! Eu posso te ajudar!
+Avó: Mas que beleza! Que menino prestativo... Pode pegar o meu livro de receita lá na sala, por favor? 
+[signal arg="progress_to_next_label,first_month"]
+[signal arg="dialogue_ended"]
+[end_timeline]
+label 2
+[signal arg="dialogue_started"]
+join Pedro (Happy) 4
+join Avó (Happy) 1
+Avó: Perfeito! Agora eu preciso dos ovos na geladeira...
+[signal arg="progress_to_next_label,first_month"]
+[signal arg="dialogue_ended"]
+[end_timeline]
+label 3
+[signal arg="dialogue_started"]
+join Avó (Happy) 1
+join Pedro (Happy) 4
+Avó: Obrigado, querido! E ainda selecionou uns grandões... Agora uma última coisa\: preciso de laranjas fresquinhas lá do jardim.
+Avó: Seu avô tá lá, qualquer coisa ele te ajuda. Assim que ficar pronto podemos todos sentar na mesa e conversar com calma!
+Pedro: É para já!
+[signal arg="dialogue_ended"]
+[signal arg="progress_to_next_label,first_month"]
+[end_timeline]
+label 4
+[signal arg="dialogue_started"]
+join Avó (Happy) 1
+join Pedro (Happy) 4
+Avó: Agora sim! E essas estão com uma cara ótima. E como você já deve adivinhar, estamos fazendo um bolo de laranja!
+Avó: Vou terminar aqui e já já te chamo. Enquanto isso, fiquei sabendo que seu avô tem algo para te mostrar...
+[signal arg="dialogue_ended"]
+[signal arg="progress_to_next_label,first_month"]
+[end_timeline]
+label 5
+[signal arg="dialogue_started"]
+join Avõ (Happy) 1
+join Pedro (Happy) 4
+Avõ: Vem cá, ô, Pedro!
+Avõ: Tá vendo como dei uma melhorada desde a sua última visita? A mesinha aqui, um lugar para pendurar as ferramentas...
+Pedro: Tá bonito, vô! E a lojinha? Vamos passar lá também? 
+Avõ: Vai bem... Dentro do possível. Muitos clientes regulares se mudaram aqui da cidade, mas estamos tocando ainda.
+Avõ: Outro dia nós passamos lá, você chegou hoje, deve estar cansado.
+Pedro: E o que você ia me mostrar?
+Avõ: Ah é! Olha só o velho gagá... 
+Avõ: Eu tenho uma ideia de algo que eu gostaria de fazer especialmente para você, mas preciso da sua ajuda.
+Avõ: Preciso do galho de madeira perfeito. Consegue achar um aqui no quintal para mim?
+Pedro: Claro! Moleza.
+[end_timeline]
+label 6
+[signal arg="dialogue_started"]
+join Pedro (Happy) 4
+join Avõ (Happy) 1
+Avõ: Era isso que eu precisava! Agora deixa só pegar isso aqui... Vou te pedir um pouco de paciência, mas vai valer a pena!
+Avõ: Aqui! Uma bela flauta!
+Pedro: Que incrível!
+Avõ: Vai lá, tenta tocar.
+[signal arg="dialogue_ended"]
+[signal arg="progress_to_next_label,first_month"]
+[end_timeline]
+label 7
+[signal arg="dialogue_started"]
+join Pedro (Happy) 4
+join Avõ (Happy) 1
+Pedro: Acho que não fui tão bom, né?
+Avõ: Que nada! Você tá aprendendo, ninguém é bom logo de início. 
+join Avó (Happy) 2
+Avó: Pedrooooooo
+leave Avó
+Avõ: Aí, falando nela... Vai lá ver o que é. 
+[signal arg="dialogue_ended"]
+[signal arg="progress_to_next_label,first_month"]
+[end_timeline]
+label 8
+[signal arg="dialogue_started"]
+join Pedro (Happy) 4
+join Avó (Happy) 1
+Avó: Pedro! A mesa já tá posta, senta aqui para comer e o bolo e a gente conversar melhor...
+Pedro: Finalmente! 
+Avó: Então, como vão as coisas na escola? 
+Pedro: É... Eu mudei de escola, do ano passado para esse.
+Avó: Sim, seus pais falaram! Se adaptando bem ao novo ano?
+Pedro: É diferente nessa nova. Ela é bem maior e tem muito mais gente. As vezes eu me sinto meio perdido. 
+Avó: Mas você fez amigos?
+Pedro: Isso sim! Mas...
+Pedro: As matérias tem ficado mais difíceis também, e a gente não tem tanto tempo para as aulas de artes quanto antes.
+Avó: Essas escolas... Vou te contar uma coisa, daqui para frente não vai sair muito disso não. Tem coisas que eles ensinam e nem sabem mais porque.
+Pedro: Ah...
+Avó: Mas não desanima! Se você gosta de alguma coisa que não consegue fazer na escola, vai ter que arranjar tempo por conta própria.
+Avó: Aqui comigo você vai sempre ter um espaço para criar...
+Pedro: O vovô me deu essa flauta, ele falou que você pode me ajudar a aprender a tocar!
+Avó: Ele deu é? Vamos tocar então, tá esperando o que?
+[wait_input]
+Avó: É um bom início, mas agora tenta assim...
+[wait_input]
+Avó: Bem melhor! Posiciona os seus dedos aqui e...
+[wait_input]
+Avó: Ótimo! Você tem muito potêncial, só tem que treinar!
+Pedro: Vou sim, vó.
+Pedro: Posso te perguntar algo?
+Avó: Claro.
+Pedro: O papai e a mamãe me falaram para não ficar te perturbando tanto para fazer coisas, para te ajudar e tal, porque talvez você estivesse mais cansada ou para baixo...
+Avó: Hm... Eles falaram isso?
+Pedro: Sim. Você não está se sentindo bem mesmo?
+Avó: É complicado. Eu queria que eles não tivessem falado isso para você dessa forma mas...
+Avó: Não precisa se preocupar, eu to me sentindo super bem, de verdade. Nada mudou. 
+Avó: Seus pais também, fazem uma tempestade em um copo d'agua!
+Avó: Eu só to precisando tomar uns remedinhos para umas dores, umas coisinhas, mas to interaça! Olha o tanto de coisa que eu fiz hoje de tarde!
+Pedro: É verdade! Que bom, vó! 
+Avó: Agora vamos terminar de comer, que eu não fiz esse bolo para ele só decorar a mesa. Mais tarde podemos tocar mais!
+[signal arg="dialogue_ended"]
+[signal arg="progress_to_next_label,first_month"]
+[end_timeline]

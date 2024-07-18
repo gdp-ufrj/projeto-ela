@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Ela"
-run/main_scene="res://Scenes/test_scene.tscn"
+run/main_scene="res://Scenes/Temporary/test_scene.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -24,13 +24,18 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 [dialogic]
 
 directories/dch_directory={
+"Avó": "res://DialogicAssets/Characters/Avó.dch",
+"Avõ": "res://DialogicAssets/Characters/Avõ.dch",
 "Iris": "res://DialogicAssets/Characters/Iris.dch",
 "Leia": "res://DialogicAssets/Characters/Leia.dch",
+"Mae": "res://DialogicAssets/Characters/Mae.dch",
+"Pai": "res://DialogicAssets/Characters/Pai.dch",
 "Pedro": "res://DialogicAssets/Characters/Pedro.dch",
 "Vaquinha_1": "res://DialogicAssets/Characters/Vaquinha_1.dch"
 }
 directories/dtl_directory={
 "cha_no_ar_timeline": "res://DialogicAssets/Timelines/cha_no_ar_timeline.dtl",
+"first_month_0": "res://DialogicAssets/Timelines/first_month_0.dtl",
 "test_timeline": "res://DialogicAssets/Timelines/test_timeline.dtl"
 }
 variables={}

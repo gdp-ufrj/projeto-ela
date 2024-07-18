@@ -31,4 +31,4 @@ func reward_item():
 	Global.find_item(given_item.Item_Unique_Key)
 	
 func set_item_chest_should_give(item_resource: ItemResource):
-	given_item = item_resource 
+	given_item = item_resource

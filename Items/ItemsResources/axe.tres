@@ -1,9 +1,11 @@
-[gd_resource type="Resource" script_class="ItemResource" load_steps=2 format=3 uid="uid://4mmlojj5w0yc"]
+[gd_resource type="Resource" script_class="ItemResource" load_steps=3 format=3 uid="uid://4mmlojj5w0yc"]
 
 [ext_resource type="Script" path="res://Items/items_custom_resource.gd" id="1_3qmxt"]
+[ext_resource type="Texture2D" uid="uid://j5bnok6d4wjy" path="res://Assets/Sprout Lands/Objects/01_Basic tools and meterials.png" id="1_hlqjd"]
 
 [resource]
 script = ExtResource("1_3qmxt")
-Item_Unique_Key = ""
-Item_Name = &""
-Item_Description = ""
+Item_Unique_Key = "axe"
+Item_Name = &"Machado"
+Item_Description = "corte arvores(por favor, não)"
+Item_Sprite = ExtResource("1_hlqjd")

@@ -1,7 +1,10 @@
-[gd_resource type="Resource" script_class="ObjectSpawnListResource" load_steps=2 format=3 uid="uid://cuf2eftyyryfd"]
+[gd_resource type="Resource" script_class="ObjectSpawnListResource" load_steps=5 format=3 uid="uid://cuf2eftyyryfd"]
 
 [ext_resource type="Script" path="res://Items/object_spawn_list_resource.gd" id="1_3u21m"]
+[ext_resource type="Resource" uid="uid://f110uagtwyyo" path="res://Items/ItemsResources/rock.tres" id="1_dglxf"]
+[ext_resource type="Resource" uid="uid://4mmlojj5w0yc" path="res://Items/ItemsResources/axe.tres" id="2_o8hvi"]
+[ext_resource type="Resource" uid="uid://ballcn210bqpo" path="res://Items/ItemsResources/watering_can.tres" id="3_mmgig"]
 
 [resource]
 script = ExtResource("1_3u21m")
-ObjectArray = Array[Resource("res://Items/items_custom_resource.gd")]([])
+ObjectArray = Array[Resource("res://Items/items_custom_resource.gd")]([ExtResource("1_dglxf"), ExtResource("2_o8hvi"), ExtResource("3_mmgig")])

@@ -261,7 +261,7 @@ libraries = {
 tree_root = SubResource("AnimationNodeStateMachine_trtkt")
 anim_player = NodePath("../AnimationPlayer")
 parameters/Idle/blend_position = Vector2(-0.000583112, 0.00582004)
-parameters/Walk/blend_position = Vector2(0, 0.008)
+parameters/Walk/blend_position = Vector2(0, 0.638)
 
 [node name="InteractionArea2D" type="Area2D" parent="."]
 script = ExtResource("3_5o8ff")
