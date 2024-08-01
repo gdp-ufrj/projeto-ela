@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://b0lcrrn72wdgt"]
+[gd_scene load_steps=6 format=3 uid="uid://b0lcrrn72wdgt"]
 
 [ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_c7g22"]
 
@@ -8,6 +8,9 @@
 gradient = SubResource("Gradient_67axk")
 
 [sub_resource type="SystemFont" id="SystemFont_bommx"]
+font_names = PackedStringArray("Comic Sans MS")
+
+[sub_resource type="SystemFont" id="SystemFont_uwhr3"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -72,6 +75,7 @@ layout_mode = 2
 [node name="StartGame" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(340, 60)
 layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_uwhr3")
 theme_override_font_sizes/font_size = 20
 text = "Começar Jogo"
 
